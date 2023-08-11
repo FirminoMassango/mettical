@@ -2,6 +2,8 @@
 
 > An app to track expenses and their respective costs, built using [React](https://react.dev/) + [Tailwind CSS](https://tailwindcss.com/) + [Capacitor](https://capacitorjs.com/solution/react).
 
+<img src="src/assets/preview.png">
+
 ## Getting Started
 
 Before running the app, make sure you have Node.js and npm (Node Package Manager) installed on your machine.
