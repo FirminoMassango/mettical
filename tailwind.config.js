@@ -19,9 +19,17 @@ export default {
         light: {
           100: '#F5F5F5',
         }
+      },
+      keyframes: {
+        'custom-bounce': {
+          '0%, 100%': { transform: 'translateY(-10%)' },
+          '50%': { transform: 'translateY(10%)' },
+        }
+      },
+      animation: {
+        'custom-bounce': 'custom-bounce 4s ease-in-out infinite',
       }
     },
   },
   plugins: [],
 }
-
