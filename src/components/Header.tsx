@@ -9,7 +9,6 @@ interface HeaderProps {
 
 export default function Header(props: HeaderProps){
     return (
-        <>
             <div className="h-52 bg-primary-200 rounded-b-3xl p-8 text-white ">
                 <div className="flex justify-between">
                     <Button icon="arrow_left"/>
@@ -31,7 +30,5 @@ export default function Header(props: HeaderProps){
                     </div>
                 </div>
             </div>
-            
-        </>
     )
 }
