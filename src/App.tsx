@@ -10,6 +10,11 @@ function App() {
         <span>200.00 MZN</span>
       </div>
       <Card/>
+      <Card/>
+      <Card/>
+      <Card/>
+      <Card/>
+      <Card/>
     </>
   )
 }
