@@ -2,11 +2,15 @@ import Icon from "./Icon"
 
 interface ButtonProps {
     icon: string;
+    fill?: boolean;
 }
 export default function Button(props: ButtonProps){
+    
+    const background_color = props.fill ? "bg-primary-100" : ""
+
     return (
         <>
-            <button className="grid h-10 w-10 bg-primary-100 place-content-center rounded-full hover:bg-secondary-100">
+            <button className={ `grid h-10 w-10 place-content-center rounded-full hover:bg-secondary-100/50 ${ background_color }` }>
                 <Icon name={props.icon}/>
             </button>
         </>

@@ -4,15 +4,16 @@ import moneyIcon from "../assets/icons/money.svg"
 interface HeaderProps {
     title: string,
     budget: string
+    main?: boolean
 }
 
 export default function Header(props: HeaderProps){
     return (
             <div className="h-52 bg-primary-200 rounded-b-3xl p-8 text-white ">
                 <div className="flex justify-between">
-                    <Button icon="arrow_left"/>
+                    { props.main && <Button icon="arrow_left" fill/> }
                     <h1 className="text-2xl font-bold">{ props.title }</h1>
-                    <Button icon="more"/>
+                    <Button icon="more" fill />
                 </div>
                 <div className="flex justify-between my-8">
                     <div className="">
