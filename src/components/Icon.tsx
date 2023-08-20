@@ -10,26 +10,39 @@ import trashIcon from "../assets/icons/trash.svg";
 import walletIcon from "../assets/icons/wallet.svg";
 import warningIcon from "../assets/icons/warnig.svg";
 
-const icons = {
-  add: addIcon,
-  arrow_left: arrowLeftIcon,
-  edit: editIcon,
-  logout: logoutIcon,
-  money: moneyIcon,
-  more: moreIcon,
-  sun: sunIcon,
-  translate: translateIcon,
-  trash: trashIcon,
-  wallet: walletIcon,
-  warning: warningIcon,
+const getIconForType = (type: string) => {
+  switch (type) {
+    case "add":
+      return addIcon;
+    case "arrow_left":
+      return arrowLeftIcon;
+    case "edit":
+      return editIcon;
+    case "logout":
+      return logoutIcon;
+    case "money":
+      return moneyIcon;
+    case "more":
+      return moreIcon;
+    case "sun":
+      return sunIcon;
+    case "translate":
+      return translateIcon;
+    case "trash":
+      return trashIcon;
+    case "wallet":
+      return walletIcon;
+    case "warning":
+      return warningIcon;
+  }
 };
 
 interface IconProps {
-  name: keyof typeof icons;
+  name: string;
 }
 
 export default function Icon(props: IconProps) {
-  const iconSrc = icons[props.name];
+  const iconSrc = getIconForType(props.name);
 
   return <img src={iconSrc} alt={props.name} />;
 }

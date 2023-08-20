@@ -15,7 +15,7 @@ function App() {
       <Card title="Despesa 5" value={10000} />
       <Card title="Despesa 6" value={10000} />
       <Card title="Despesa 7" value={10000} />
-      <Button type="fab" />
+      <Button icon="add" type="fab" />
     </>
   );
 }

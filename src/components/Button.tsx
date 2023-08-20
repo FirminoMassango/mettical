@@ -1,7 +1,7 @@
 import Icon from "./Icon";
 
 interface ButtonProps {
-  icon?: string;
+  icon: string;
   fill?: boolean;
   type: string;
 }
@@ -19,7 +19,7 @@ export default function Button(props: ButtonProps) {
         </button>
       ) : (
         <button className="grid h-16 w-16 place-content-center fixed bottom-9 right-4 rounded-full bg-primary-200 hover:bg-primary-100">
-          <Icon name="add" />
+          <Icon name={ props.icon } />
         </button>
       ) }
     </>
