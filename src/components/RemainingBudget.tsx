@@ -20,7 +20,9 @@ export default function RemainingBudget(props: RemainingBudgetProps) {
             </div>
           </div>
         ) : (
-          <span className="text-secondary-200 text-lg font-semibold ml-2">200.00 MZN</span>
+          <span className="text-secondary-200 text-lg font-semibold ml-2">
+            200.00 MZN
+          </span>
         )}
       </div>
     </>
