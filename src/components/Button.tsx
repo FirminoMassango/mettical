@@ -3,6 +3,7 @@ import Icon from "./Icon"
 interface ButtonProps {
     icon: string;
     fill?: boolean;
+    type?: string;
 }
 export default function Button(props: ButtonProps){
     
@@ -10,9 +11,10 @@ export default function Button(props: ButtonProps){
 
     return (
         <>
-            <button className={ `grid h-10 w-10 place-content-center rounded-full hover:bg-secondary-100/50 ${ background_color }` }>
-                <Icon name={props.icon}/>
+            <button className={ `grid h-10 w-10 place-content-center rounded-full hover:bg-primary-100/50 ${ background_color }` }>
+                <Icon name={ props.icon }/>
             </button>
+    
         </>
     )
 }
