@@ -7,7 +7,7 @@ interface RemainingBudgetProps {
 export default function RemainingBudget(props: RemainingBudgetProps) {
   return (
     <>
-      <div className="flex justify-between mx-4 my-8">
+      <div className="flex justify-between mx-4 my-8 fixed">
         <span className="text-xl text-secondary-300 font-semibold">
           Remanescente
         </span>
