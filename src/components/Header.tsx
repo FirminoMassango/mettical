@@ -21,10 +21,10 @@ export default function Header(props: HeaderProps) {
             <h1 className="uppercase text-base font-bold">Valor inicial</h1>
           </div>
           <div className="bg-seconday-100 mt-4">
-            <span className="text-3xl font-bold align-bottom align-text-bottom">
+            <span className="text-2xl font-bold align-bottom align-text-bottom">
               {props.budget}
             </span>
-            <span className="align-text-bottom ml-2 font-bold">MZN</span>
+            <span className="align-text-bottom ml-2  text-base font-bold">MZN</span>
           </div>
         </div>
         <div>
