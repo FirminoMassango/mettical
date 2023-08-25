@@ -9,7 +9,7 @@ interface HeaderProps {
 
 export default function Header(props: HeaderProps) {
   return (
-    <div className="h-52 bg-primary-200 rounded-b-3xl p-8 text-white ">
+    <div className="h-52 bg-primary-200 rounded-b-3xl p-4 text-white ">
       <div className="flex justify-between">
         {props.isMainScreen && <Button icon="arrow_left" type="default" fill />}
         <h1 className="text-2xl font-bold">{props.title}</h1>
@@ -24,7 +24,7 @@ export default function Header(props: HeaderProps) {
             <span className="text-2xl font-bold align-bottom align-text-bottom">
               {props.budget}
             </span>
-            <span className="align-text-bottom ml-2  text-base font-bold">MZN</span>
+            <span className="align-text-bottom ml-2 text-base font-bold">MZN</span>
           </div>
         </div>
         <div>
