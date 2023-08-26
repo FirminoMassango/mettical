@@ -6,7 +6,7 @@
 
 ## Getting Started
 
-Before running the app, make sure you have Node.js and npm (Node Package Manager) installed on your machine.
+Before running the app, make sure you have Node.js and npm (Node Package Manager) installed on your machine and then clone this repository.
 
 Execute the following commands in order to install the dependecies
 
