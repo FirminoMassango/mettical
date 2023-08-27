@@ -18,7 +18,7 @@ export default function Button(props: ButtonProps) {
           <Icon name={ props.icon } />
         </button>
       ) : (
-        <button className="grid h-16 w-16 place-content-center fixed bottom-9 right-4 rounded-full bg-primary-200 hover:bg-primary-100">
+        <button className="grid h-14 w-14 place-content-center fixed bottom-9 right-4 rounded-full bg-primary-200 hover:bg-primary-100">
           <Icon name={ props.icon } />
         </button>
       ) }
