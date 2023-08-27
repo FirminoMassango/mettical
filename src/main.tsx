@@ -9,14 +9,15 @@ import SpecificExpense from "./screens/SpecificExpense";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Bills/>,
-  },{
+    element: <Bills />,
+  },
+  {
     path: "/expenses/:billId/:title",
-    element: <Expense/>,
+    element: <Expense />,
   },
   {
     path: "/expense/:id",
-    element: <SpecificExpense/>,
+    element: <SpecificExpense />,
   },
 ]);
 

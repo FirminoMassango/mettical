@@ -14,9 +14,9 @@ export default function Card(props: CardProps) {
     minimumFractionDigits: 2,
   }).format(props.value);
 
-  const screenName = props.screenName === "bills" ? "/" : props.screenName
-  const val = `${screenName}/${props.value}`
-  console.log(val)
+  const screenName = props.screenName === "bills" ? "/" : props.screenName;
+  const val = `${screenName}/${props.value}`;
+  console.log(val);
 
   return (
     <Link to={`${props.screenName}/${props.value}/${props.title}`}>
@@ -41,6 +41,6 @@ export default function Card(props: CardProps) {
           </div>
         </div>
       </div>
-      </Link>
+    </Link>
   );
 }
