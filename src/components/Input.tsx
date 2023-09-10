@@ -1,6 +1,7 @@
 interface InputProps {
-  name?: string;
   type: string;
+  name?: string;
+  placeholder?: string;
 }
 export default function Input(props: InputProps) {
   return (
@@ -16,8 +17,13 @@ export default function Input(props: InputProps) {
           type={props.type}
           name={props.name}
           id=""
-          className="h-12 p-4 border border-secondary-100 rounded-lg"
-          placeholder="Indique o tipo de despesa. Ex: Faculdade"
+          className={`h-12 p-4 border border-secondary-100 rounded-lg focus:outline-none focus:ring focus:ring-primary-100/20 ${
+            props.type === "button"
+              ? "bg-primary-200 border-none text-white font-semibold"
+              : ""
+          }`}
+          placeholder={props.placeholder}
+          value={props.type === "button" ? "Registar despesa" : ""}
         />
       </div>
     </>
