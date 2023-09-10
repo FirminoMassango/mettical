@@ -1,6 +1,7 @@
-import { FormProvider } from "../contexts/DisplayFormContext";
+// import { FormProvider } from "../contexts/DisplayFormContext";
 import { useForm } from "../contexts/DisplayFormContext";
 import Icon from "./Icon";
+import BottomSheet from "./BottomSheet";
 
 interface ButtonProps {
   icon: string;
@@ -24,6 +25,8 @@ export default function Button(props: ButtonProps) {
   const { isActive, toggleForm } = useForm();
   const background_color = props.fill ? "bg-primary-100" : "";
 
+  console.log(isActive);
+
   return (
     <>
       {props.type === "default" ? (
@@ -33,16 +36,15 @@ export default function Button(props: ButtonProps) {
           <Icon name={props.icon} />
         </button>
       ) : (
-        <FormProvider>
-          <p>Form is {isActive ? "active" : "inactive"}</p>
-          <button
-            className="grid h-14 w-14 place-content-center fixed bottom-9 right-4 rounded-full bg-primary-200 hover:bg-primary-100"
-            onClick={toggleForm}
-          >
-            <Icon name={props.icon} />
-          </button>
-        </FormProvider>
+        <button
+          className="grid h-14 w-14 place-content-center fixed bottom-9 right-4 rounded-full bg-primary-200 hover:bg-primary-100"
+          onClick={toggleForm}
+        >
+          <Icon name={props.icon} />
+        </button>
       )}
+
+      {isActive && <BottomSheet />}
     </>
   );
 }
