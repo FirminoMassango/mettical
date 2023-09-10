@@ -17,7 +17,7 @@ export default function Input(props: InputProps) {
           type={props.type}
           name={props.name}
           id=""
-          className={`h-12 p-4 border border-secondary-100 rounded-lg focus:outline-none focus:ring focus:ring-primary-100/20 ${
+          className={`h-12 p-4 border border-slate-300 text-sm shadow-sm placeholder-slate-400 rounded-md focus:outline-none focus:ring focus:ring-primary-100/20 ${
             props.type === "button"
               ? "bg-primary-200 border-none text-white font-semibold"
               : ""

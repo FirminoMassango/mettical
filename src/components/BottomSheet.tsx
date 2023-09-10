@@ -10,7 +10,7 @@ export default function BottomSheet() {
     <>
       <CurrentScreenContext.Provider value="bbbbb">
         {isActive && (
-          <div className="w-full h-2/5 bg-white border border-secondary-100 rounded-t-2xl fixed bottom-0 p-4">
+          <div className="w-full h-2/5 bg-white border border-slate-300 shadow-lg rounded-t-2xl fixed bottom-0 p-4">
             <div className="flex justify-between mb-4">
               {currentScreen}
               <button className="text-red-800" onClick={toggleForm}>
