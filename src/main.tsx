@@ -12,11 +12,11 @@ const router = createBrowserRouter([
     element: <Bills />,
   },
   {
-    path: "/expenses/:billId/:title",
+    path: "/expenses",
     element: <Expense />,
   },
   {
-    path: "/expense/:id",
+    path: "/expense",
     element: <SpecificExpense />,
   },
 ]);

@@ -3,8 +3,8 @@ import moneyIcon from "../assets/icons/money.svg";
 import { Link } from "react-router-dom";
 
 interface HeaderProps {
-  title: string;
-  budget: string;
+  title?: string;
+  budget?: number;
   isMainScreen?: boolean;
 }
 

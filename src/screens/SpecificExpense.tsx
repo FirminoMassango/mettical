@@ -2,20 +2,35 @@ import Header from "../components/Header";
 import Card from "../components/Card";
 import RemainingBudget from "../components/RemainingBudget";
 import Button from "../components/Button";
+import { CurrentScreenContext } from "../contexts/CurrentScreenContext";
+import { CurrentExpenseDetailsContext } from "../contexts/CurrentExpenseDetailsContext";
+
+import { useContext } from "react";
 
 function SpecificExpense() {
+  const expenseDetails = useContext(CurrentExpenseDetailsContext);
+  // const currentScreen = useContext(CurrentScreenContext);
+
+  // if (currentScreen === "Expenses") {
+  expenseDetails.title = "Despesa lvl 2";
+  expenseDetails.budget = 5000;
+  // }
   return (
     <>
-      <Header title="Despesa 1" budget="150,200.00" />
-      <RemainingBudget />
-      <Card title="Despesa 1" value={10000} />
-      <Card title="Despesa 2" value={10000} />
-      <Card title="Despesa 3" value={10000} />
-      <Card title="Despesa 4" value={10000} />
-      <Card title="Despesa 5" value={10000} />
-      <Card title="Despesa 6" value={10000} />
-      <Card title="Despesa 7" value={10000} />
-      <Button icon="add" type="fab" />
+      <CurrentScreenContext.Provider value="SpecificExpense">
+        <CurrentExpenseDetailsContext.Provider value={expenseDetails}>
+          <Header title={expenseDetails.title} budget={expenseDetails.budget} />
+          <RemainingBudget />
+          <Card title="Despesa 1" value={10000} />
+          <Card title="Despesa 2" value={10000} />
+          <Card title="Despesa 3" value={10000} />
+          <Card title="Despesa 4" value={10000} />
+          <Card title="Despesa 5" value={10000} />
+          <Card title="Despesa 6" value={10000} />
+          <Card title="Despesa 7" value={10000} />
+          <Button icon="add" type="fab" />
+        </CurrentExpenseDetailsContext.Provider>
+      </CurrentScreenContext.Provider>
     </>
   );
 }

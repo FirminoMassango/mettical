@@ -1,5 +1,7 @@
 import Button from "./Button";
 import { Link } from "react-router-dom";
+import { CurrentScreenContext } from "../contexts/CurrentScreenContext";
+import { useContext } from "react";
 
 interface CardProps {
   title: string;
@@ -14,12 +16,13 @@ export default function Card(props: CardProps) {
     minimumFractionDigits: 2,
   }).format(props.value);
 
-  const screenName = props.screenName === "bills" ? "/" : props.screenName;
-  const val = `${screenName}/${props.value}`;
-  console.log(val);
+  const currentScreen = useContext(CurrentScreenContext);
+
+  const screenName =
+    currentScreen === "SpecificExpense" ? "expense" : props.screenName;
 
   return (
-    <Link to={`${props.screenName}/${props.value}/${props.title}`}>
+    <Link to={`/${screenName}`}>
       <div className="flex items-center justify-between h-32 mx-4 my-4 p-8 bg-white rounded-2xl shadow-2xl shadow-secondary-100/50">
         <div>
           <h1 className="text-xl text-secondary-300 font-semibold mb-4">
