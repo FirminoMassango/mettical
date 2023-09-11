@@ -2,6 +2,8 @@ import Header from "../components/Header";
 import Card from "../components/Card";
 import RemainingBudget from "../components/RemainingBudget";
 import Button from "../components/Button";
+import BottomSheet from "../components/BottomSheet";
+import {FormProvider} from "../contexts/DisplayFormContext.tsx";
 // import { useParams } from "react-router-dom";
 import { CurrentScreenContext } from "../contexts/CurrentScreenContext";
 import { CurrentExpenseDetailsContext } from "../contexts/CurrentExpenseDetailsContext";
@@ -21,6 +23,7 @@ function Expense() {
     <>
       <CurrentScreenContext.Provider value="Expenses">
         <CurrentExpenseDetailsContext.Provider value={expenseDetails}>
+          <FormProvider>
           <Header title={expenseDetails.title} budget={expenseDetails.budget} />
           <RemainingBudget />
           <Card title="Despesa 1" value={10000} screenName="expense" />
@@ -31,6 +34,8 @@ function Expense() {
           <Card title="Despesa 6" value={10000} screenName="expense" />
           <Card title="Despesa 7" value={10000} screenName="expense" />
           <Button icon="add" type="fab" />
+          <BottomSheet />
+          </FormProvider>
         </CurrentExpenseDetailsContext.Provider>
       </CurrentScreenContext.Provider>
     </>
