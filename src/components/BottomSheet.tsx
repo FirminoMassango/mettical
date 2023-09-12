@@ -2,6 +2,7 @@ import Input from "./Input";
 import { CurrentScreenContext } from "../contexts/CurrentScreenContext";
 import { useContext } from "react";
 import { useForm } from "../contexts/DisplayFormContext";
+import Icon from "./Icon";
 
 export default function BottomSheet() {
   const currentScreen = useContext(CurrentScreenContext);
@@ -10,11 +11,11 @@ export default function BottomSheet() {
     <>
       <CurrentScreenContext.Provider value="bbbbb">
         {isActive && (
-          <div className="w-full h-80 bg-white border border-slate-300 shadow-lg rounded-t-2xl fixed bottom-0 p-4">
+          <div className="w-full h-84 bg-white border border-slate-300 shadow-lg rounded-t-2xl fixed bottom-0 p-4">
             <div className="flex justify-between mb-4">
               {currentScreen}
               <button className="text-red-800" onClick={toggleForm}>
-                close
+                <Icon name="close" />
               </button>
             </div>
             <Input

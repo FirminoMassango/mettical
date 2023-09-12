@@ -1,5 +1,6 @@
 import addIcon from "../assets/icons/add.svg";
 import arrowLeftIcon from "../assets/icons/arrow_left.svg";
+import closeIcon from "../assets/icons/close.svg";
 import editIcon from "../assets/icons/edit.svg";
 import logoutIcon from "../assets/icons/logout.svg";
 import moneyIcon from "../assets/icons/money.svg";
@@ -16,6 +17,8 @@ const getIconForType = (type: string) => {
       return addIcon;
     case "arrow_left":
       return arrowLeftIcon;
+    case "close":
+      return closeIcon;
     case "edit":
       return editIcon;
     case "logout":
