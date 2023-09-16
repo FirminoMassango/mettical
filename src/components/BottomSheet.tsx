@@ -13,7 +13,9 @@ export default function BottomSheet() {
         {isActive && (
           <div className="w-full h-84 bg-white border border-slate-300 shadow-lg rounded-t-2xl fixed bottom-0 p-4">
             <div className="flex justify-between mb-4">
-              {currentScreen}
+              <span className="text-secondary-300 font-bold">
+                {currentScreen}
+              </span>
               <button className="text-red-800" onClick={toggleForm}>
                 <Icon name="close" />
               </button>

@@ -16,7 +16,7 @@ function Main() {
 
   return (
     <>
-      <CurrentScreenContext.Provider value="Bills">
+      <CurrentScreenContext.Provider value="Despesa Principal">
         <CurrentExpenseDetailsContext.Provider value={expenseDetails}>
           <FormProvider>
             <Header

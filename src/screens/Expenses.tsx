@@ -3,7 +3,7 @@ import Card from "../components/Card";
 import RemainingBudget from "../components/RemainingBudget";
 import Button from "../components/Button";
 import BottomSheet from "../components/BottomSheet";
-import {FormProvider} from "../contexts/DisplayFormContext.tsx";
+import { FormProvider } from "../contexts/DisplayFormContext.tsx";
 // import { useParams } from "react-router-dom";
 import { CurrentScreenContext } from "../contexts/CurrentScreenContext";
 import { CurrentExpenseDetailsContext } from "../contexts/CurrentExpenseDetailsContext";
@@ -21,20 +21,23 @@ function Expense() {
 
   return (
     <>
-      <CurrentScreenContext.Provider value="Expenses">
+      <CurrentScreenContext.Provider value="Despesa Específica">
         <CurrentExpenseDetailsContext.Provider value={expenseDetails}>
           <FormProvider>
-          <Header title={expenseDetails.title} budget={expenseDetails.budget} />
-          <RemainingBudget />
-          <Card title="Despesa 1" value={10000} screenName="expense" />
-          <Card title="Despesa 2" value={10000} screenName="expense" />
-          <Card title="Despesa 3" value={10000} screenName="expense" />
-          <Card title="Despesa 4" value={10000} screenName="expense" />
-          <Card title="Despesa 5" value={10000} screenName="expense" />
-          <Card title="Despesa 6" value={10000} screenName="expense" />
-          <Card title="Despesa 7" value={10000} screenName="expense" />
-          <Button icon="add" type="fab" />
-          <BottomSheet />
+            <Header
+              title={expenseDetails.title}
+              budget={expenseDetails.budget}
+            />
+            <RemainingBudget />
+            <Card title="Despesa 1" value={10000} screenName="expense" />
+            <Card title="Despesa 2" value={10000} screenName="expense" />
+            <Card title="Despesa 3" value={10000} screenName="expense" />
+            <Card title="Despesa 4" value={10000} screenName="expense" />
+            <Card title="Despesa 5" value={10000} screenName="expense" />
+            <Card title="Despesa 6" value={10000} screenName="expense" />
+            <Card title="Despesa 7" value={10000} screenName="expense" />
+            <Button icon="add" type="fab" />
+            <BottomSheet />
           </FormProvider>
         </CurrentExpenseDetailsContext.Provider>
       </CurrentScreenContext.Provider>

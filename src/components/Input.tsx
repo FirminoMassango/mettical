@@ -7,10 +7,7 @@ export default function Input(props: InputProps) {
   return (
     <>
       <div className="flex flex-col mb-4">
-        <label
-          htmlFor=""
-          className="text-base text-secondary-300 font-bold mb-2"
-        >
+        <label htmlFor="" className="text-base text-secondary-300 mb-2">
           {props.name}
         </label>
         <input
